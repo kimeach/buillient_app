@@ -11,12 +11,31 @@ class MainTabsScreen extends StatelessWidget {
     return AutoTabsRouter.pageView(
       routes: const [
         HomeRoute(),
+        StatsRoute(),
+        SettingsRoute(),
       ],
       builder: (context, child, animation) {
         final tabsRouter = AutoTabsRouter.of(context);
         return Scaffold(
           body: child,
-          // ✅ Builder로 감싸서 HomeScreen을 포함하는 context 확보
+          bottomNavigationBar: BottomNavigationBar(
+            currentIndex: tabsRouter.activeIndex,
+            onTap: tabsRouter.setActiveIndex,
+            items: const [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: 'Home',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.bar_chart),
+                label: 'Stats',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.settings),
+                label: 'Settings',
+              ),
+            ],
+          ),
         );
       },
     );

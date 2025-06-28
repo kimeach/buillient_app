@@ -1,6 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:buillient_app/core/screens/main_tabs_screen.dart';
 import 'package:buillient_app/home/screens/home_screen.dart';
+import 'package:buillient_app/stats/screens/stats_screen.dart';
+import 'package:buillient_app/settings/screens/settings_screen.dart';
 import 'package:flutter/cupertino.dart';
 
 
@@ -16,6 +18,8 @@ class AppRouter extends _$AppRouter {
       initial: true,
       children: [
         AutoRoute(page: HomeRoute.page, path: 'home'),
+        AutoRoute(page: StatsRoute.page, path: 'stats'),
+        AutoRoute(page: SettingsRoute.page, path: 'settings'),
       ],
     ),
 
