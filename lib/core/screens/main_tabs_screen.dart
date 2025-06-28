@@ -1,9 +1,11 @@
+import 'package:auto_route/annotations.dart';
 import 'package:buillient_app/home/screens/home_screen.dart';
 import 'package:buillient_app/news/screens/news_screen.dart';
 import 'package:buillient_app/trading/screens/trading_screen.dart';
 import 'package:buillient_app/settings/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
 
+@RoutePage()
 class MainTabsScreen extends StatefulWidget {
   const MainTabsScreen({super.key});
 
