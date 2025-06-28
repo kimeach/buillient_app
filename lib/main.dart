@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'core/screens/main_tabs_screen.dart';
+import 'home/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
